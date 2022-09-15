@@ -85,6 +85,11 @@ libgio-2.0.so.0
 # libgdk-x11-2.0.so.0 # Missing on openSUSE-Tumbleweed-KDE-Live-x86_64-Snapshot20170601-Media.iso
 # libgtk-x11-2.0.so.0 # Missing on openSUSE-Tumbleweed-KDE-Live-x86_64-Snapshot20170601-Media.iso
 
+libgmodule-2.0.so
+# Workaround for:
+# On distros with libglib2.0-0 >= 2.70: "symbol lookup error: /lib/x86_64-linux-gnu/libgio-2.0.so.0: undefined symbol: g_module_open_full"
+# The workaroud is discussed at https://github.com/project-slippi/Ishiiruka/issues/323
+
 libasound.so.2
 # Workaround for:
 # No sound, e.g., in VLC.AppImage (does not find sound cards)
